@@ -1,0 +1,20 @@
+<h3>
+  Product Details
+</h3>
+
+<p *ngIf= "qty"> Quantity must be 0 to delete</p>
+
+<h3>Name</h3> {{oneTask.name}}
+<br>
+<h3>Qty: </h3> {{oneTask.quantity}}
+<br>
+<h3>price: </h3> ${{oneTask.price}}
+<br>
+
+
+
+<form (submit)="onSubmits()">
+  <input type="submit" value="DELETE">
+</form> 
+
+<button [routerLink]="['']">BACK</button>

@@ -1,0 +1,32 @@
+<button [routerLink]="['new']">Add New Product!</button>
+<br>
+<h3>Product List</h3>
+<table style="width:100%">
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Qty</th>
+    <th>Price</th> 
+  </tr>
+  <tr *ngFor = "let task of tasks.data">
+    <td>
+      {{task._id}}
+    </td>    
+    <td>
+      {{task.name}}
+    </td>
+    <td>
+      {{task.quantity}}
+    </td> 
+    <td>
+      ${{task.price}}
+    </td> 
+    <td>
+      <button [routerLink]="['products', task._id]">DETAILS</button>
+    </td>
+    <td>
+      <button [routerLink]="['edit', task._id]">EDIT</button>
+    </td>
+  </tr>
+
+</table>

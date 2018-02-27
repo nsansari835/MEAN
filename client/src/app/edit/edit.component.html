@@ -1,0 +1,19 @@
+<h3> Edit this Product </h3>
+<p *ngIf="error"> Product must contain a Name.</p>
+<p *ngIf="error"> Product must contain a Qty.</p>
+<p *ngIf="error"> Product must contain a Price.</p>
+<div>
+    <form (submit)="onSubmit()">
+      <label>Name: 
+          <input type="text" name="oneTask.name" [(ngModel)]="oneTask.name" />
+      </label><br>
+      <label>Qty:
+        <input type="text" name="oneTask.quantity" [(ngModel)]="oneTask.quantity" />
+      </label><br>
+      <label>Price:
+        <input type="text" name="oneTask.price" [(ngModel)]="oneTask.price" />
+      </label><br>
+        <input type="submit" value="UPDATE">
+    </form>
+    <button [routerLink]="['']">HOME</button>
+  </div> 

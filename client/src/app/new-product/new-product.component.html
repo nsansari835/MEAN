@@ -1,0 +1,22 @@
+<h3>New Product</h3>
+
+<p *ngIf="error"> Product must contain a Name.</p>
+<p *ngIf="error"> Product must contain a Qty.</p>
+<p *ngIf="error"> Product must contain a Price.</p>
+
+<div>
+  <form (submit)="onSubmit()">
+      <p *ngIf="error"> Failed Validation!</p>
+    <label>Name:
+        <input type="text" name="newTask.name" [(ngModel)]="newTask.name" />
+    </label><br>
+    <label>Qty:
+      <input type="text" name="newTask.quantity" [(ngModel)]="newTask.quantity" />
+    </label><br>
+    <label>Price:
+      <input type="text" name="newTask.price" [(ngModel)]="newTask.price" />
+    </label><br>
+      <input type="submit" value="CREATE">
+  </form>
+  <button [routerLink]="['']">HOME</button>
+</div>
